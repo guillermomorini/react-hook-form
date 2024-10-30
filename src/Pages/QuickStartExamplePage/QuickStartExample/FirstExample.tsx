@@ -1,13 +1,12 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import "./QuickStartExample.css";
+import "./FirstExample.css";
 
 type Inputs = {
   example: string;
   exampleRequired: string;
-  dog: Date;
 };
 
-export const QuickStartExample: React.FC = () => {
+export const FirstExample: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -25,7 +24,7 @@ export const QuickStartExample: React.FC = () => {
         example: <input defaultValue="text" {...register("example")} />
       </label>
       <label>
-        example required:
+        example required:{" "}
         <input
           defaultValue="a"
           {...register("exampleRequired", { required: true })}
@@ -34,6 +33,10 @@ export const QuickStartExample: React.FC = () => {
 
       <input type="submit" />
       {errors.exampleRequired && <span>exampleRequired cannot be empty</span>}
+      <p>
+        it is interesting to note that the validation does not occur until you
+        click submit, but after that, it happens instantaneously as you type.
+      </p>
     </form>
   );
 };
