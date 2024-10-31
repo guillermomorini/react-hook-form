@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { HooksPage } from "../Pages/HooksPage/HooksPage";
 import { PageName } from "../Pages/PageName";
 import { QuickStartExamplePage } from "../Pages/QuickStartExamplePage";
+import { SandboxPage } from "../Pages/SandboxPage/SandboxPage";
 import { ValidationPage } from "../Pages/ValidationPage";
 
 export const useNavigation = () => {
@@ -14,6 +16,12 @@ export const useNavigation = () => {
     }
     if (pageName === "Validation") {
       page = <ValidationPage />;
+    }
+    if (pageName === "Sandbox") {
+      page = <SandboxPage />;
+    }
+    if (pageName === "Hooks") {
+      page = <HooksPage />;
     }
 
     return page;
