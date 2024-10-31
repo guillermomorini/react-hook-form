@@ -1,6 +1,6 @@
 import "./App.css";
-import { NavBar } from "./components/NavBar";
-import { useNavigation } from "./hooks/useNavigation";
+import { NavBar } from "./Navigation/components/NavBar";
+import { useNavigation } from "./Navigation/hooks/useNavigation";
 
 function App() {
   const { page, setPageName } = useNavigation();
