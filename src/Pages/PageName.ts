@@ -1,1 +1,1 @@
-export type PageName = "QuickStart" | "Validation" | "Sandbox" | "Hooks";
+export type PageName = "QuickStart" | "Validation" | "Sandbox" | "Hooks" | "useForm";

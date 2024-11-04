@@ -3,10 +3,11 @@ import { HooksPage } from "../../Pages/HooksPage/HooksPage";
 import { PageName } from "../../Pages/PageName";
 import { QuickStartExamplePage } from "../../Pages/QuickStartExamplePage";
 import { SandboxPage } from "../../Pages/SandboxPage/SandboxPage";
+import { UseFormPage } from "../../Pages/UseFormPage";
 import { ValidationPage } from "../../Pages/ValidationPage";
 
 export const useNavigation = () => {
-  const [pageName, setPageName] = useState<PageName>("QuickStart");
+  const [pageName, setPageName] = useState<PageName>("useForm");
 
   const getPage = (pageName: PageName) => {
     let page;
@@ -22,6 +23,9 @@ export const useNavigation = () => {
     }
     if (pageName === "Hooks") {
       page = <HooksPage />;
+    }
+    if (pageName === "useForm") {
+      page = <UseFormPage />;
     }
 
     return page;
